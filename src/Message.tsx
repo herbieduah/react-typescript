@@ -1,8 +1,13 @@
 import * as React from 'react';
 
-const Message = (prop: {message: string}): any => {
+interface UserMessage {
+    name: string;
+    message: string;
+}
+
+const Message = (prop: UserMessage ): any => {
     return (
-        <p>{prop.message}</p>
+    <p>{prop.name},{prop.message}</p>
     );
 }
 export default Message;
