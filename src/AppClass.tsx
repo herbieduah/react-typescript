@@ -1,10 +1,17 @@
-import * as React from 'react';
+import  React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Message from './Message';
 
-function App() {
+class App extends Component<any> {
+  componentWillMount() {
+    console.log('Almost there...');
+  }
 
+  componentDidMount() {
+    console.log('Finally there..');
+  }
+  render(){
   return (
     <div className="App">
       <header className="App-header">
@@ -13,6 +20,7 @@ function App() {
       </header>
     </div>
   );
+    }
 }
 
 export default App;
