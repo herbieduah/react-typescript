@@ -3,19 +3,23 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  // let firstValue: string = 'Herbie';
-  // let firstValue: number = 26;
-  // let firstValue: boolean = true;
-  // let firstValue: number[] = [2,3,56];
-  // let firstValue: Array<number> = [2,3,56];
-  let firstValue: Array<string> = ["one","two","Herbie"];
+ //tuple, you can multiple arrays
+ let aTuple: [string,number] = ["Herbie", 26] ;
+ //enum is like an object
+ enum Codes {first = 1, second = 2};
+ //any
+ let firstName: any = "Herbie";
+ //void
+ const warning = (): void => {
+   console.log('Warning');
+ }
 
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          The value {firstValue} is of {typeof firstValue} type!
+          The value {aTuple[0]} is of {typeof aTuple} type!
         </p>
       </header>
     </div>
